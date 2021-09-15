@@ -2,7 +2,7 @@
 
 <p align="center">
 <img src="./design/desktop-preview.jpg"
-     alt="Desktop Screenshot" width="600">
+     alt="Desktop Screenshot" width="800">
 </p>
 
 ## Welcome! 👋
@@ -33,20 +33,20 @@ Users should be able to:
 
 <p align="center">
 <img src="./images/screenshot-desktop.png"
-     alt="Desktop Screenshot" width="600">
+     alt="Desktop Screenshot" width="800">
 </p>
 
 <p align="center">Mobile</p>
 
 <p align="center">
 <img src="./images/screenshot-mobile.png"
-     alt="Desktop Screenshot" height="500">
+     alt="Desktop Screenshot" height="600">
 </p>
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Solution Page](https://www.frontendmentor.io/solutions/stats-preview-card-component-using-html-and-css-flexbox-fhc0YIwsb)
+- Live Site URL: [Preview Site](https://jgbpessoa.github.io/stats-preview-card/)
 
 ## My process
 
