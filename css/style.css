@@ -22,34 +22,47 @@
 
 body {
   background: var(--main-bg);
+  position: relative;
 }
 
 main {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: calc(100vh - 21px);
+  min-height: calc(100vh);
 }
 
 .card {
-  margin: 2rem;
+  margin: 3.5rem 1.5rem;
   background: var(--card-bg);
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
+  border-radius: 10px;
   max-width: 450px;
 }
 
 .card-img-container {
-  height: 14rem;
-  background: linear-gradient(var(--accent), var(--accent)),
-    url(../images/image-header-mobile.jpg) center/cover no-repeat;
-  background-blend-mode: multiply;
+  height: 15rem;
+  background: var(--accent);
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
+  position: relative;
+}
+
+.card-img-container::before {
+  content: "";
+  background: url(../images/image-header-mobile.jpg) center/cover no-repeat;
+  mix-blend-mode: multiply;
+  opacity: 0.8;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
 }
 
 .card-info {
-  padding: 2rem;
+  padding: 2.5rem;
 }
 
 .card-info h1 {
@@ -58,11 +71,15 @@ main {
   padding-bottom: 1rem;
   color: var(--main-h);
   line-height: 1.25;
-  font-size: 1.6rem;
+  font-size: 1.65rem;
 }
 
 .card-info span {
   color: var(--accent);
+}
+
+.stats {
+  padding-top: 0.5rem;
 }
 
 .card-info h1 + p {
@@ -78,7 +95,7 @@ main {
   text-align: center;
   font-family: var(--ff-primary);
   color: var(--main-h);
-  padding-top: 2rem;
+  padding-top: 1.5rem;
 }
 
 .card-info h2 span {
@@ -87,14 +104,14 @@ main {
   text-transform: uppercase;
   text-align: center;
   color: var(--stat-h);
-  padding-top: 0.5rem;
+  padding-top: 0.4rem;
   font-size: 0.875rem;
 }
 
 @media screen and (min-width: 900px) {
   .card {
-    margin: 2rem 0;
-    max-width: 1168px;
+    margin: 3rem 0;
+    max-width: 1110px;
     display: flex;
     flex-direction: row-reverse;
     flex: 0 0 calc(100% - 17rem);
@@ -104,16 +121,30 @@ main {
   .card-img-container {
     height: auto;
     width: 100%;
-    flex: 0 0 50%;
+    flex: 0 0 49%;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
     border-top-left-radius: 0;
-    background: linear-gradient(var(--accent), var(--accent)),
-      url(../images/image-header-desktop.jpg) center/cover no-repeat;
+    background: var(--accent);
+    position: relative;
+  }
+
+  .card-img-container::before {
+    content: "";
+    background: url(../images/image-header-desktop.jpg) center/cover no-repeat;
+    mix-blend-mode: multiply;
+    opacity: 0.8;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
   }
 
   .card-info {
-    flex: 0 0 50%;
+    flex: 0 0 51%;
     padding: 2.5rem;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
@@ -135,7 +166,7 @@ main {
   }
 
   .stats h2 {
-    padding-top: 3rem;
+    padding-top: 4rem;
     font-size: 1.25rem;
     padding-right: 5%;
   }
@@ -153,6 +184,8 @@ main {
 @media screen and (min-width: 1200px) {
   .card-info {
     padding: 4rem;
+    padding-top: 4.5rem;
+    padding-left: 4.5rem;
   }
 
   .card-info h1 {
@@ -167,7 +200,7 @@ main {
   .stats {
     display: flex;
     justify-content: space-between;
-    padding-right: 24.5%;
+    padding-right: 20%;
   }
 
   .stats h2 {
